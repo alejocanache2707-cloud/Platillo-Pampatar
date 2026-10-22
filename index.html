@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pampatar Paradise - La Foforera de Pampatar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        caribbean: {
+                            100: '#E6F4F8',
+                            300: '#83C5BE',
+                            500: '#00A896',
+                            700: '#028090',
+                            900: '#05668D'
+                        },
+                        sand: {
+                            50: '#FAF8F5',
+                            100: '#F5EFE6',
+                            200: '#E8DCCB'
+                        },
+                        coral: {
+                            400: '#FF70A6',
+                            500: '#FF6B6B',
+                            600: '#EE5253'
+                        },
+                        sunshine: {
+                            400: '#FFD166',
+                            500: '#FFB703'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        hand: ['Caveat', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f2f7f9;
+            color: #2D3748;
+        }
+
+        .paper-bg {
+            background-color: #FFFFFF;
+            background-image: radial-gradient(#05668d0d 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .brush-badge {
+            background-color: #e3f2fd;
+            border-radius: 20px 8px 20px 8px;
+        }
+
+        .brush-badge-coral {
+            background-color: #ffebee;
+            border-radius: 20px 8px 20px 8px;
+        }
+
+        .brush-badge-green {
+            background-color: #e8f5e9;
+            border-radius: 20px 8px 20px 8px;
+        }
+    </style>
+</head>
+<body class="py-6 px-3 sm:px-6 min-h-screen flex justify-center items-center">
+
+    <!-- CONTENEDOR PRINCIPAL TIPO CARTA DE RESTAURANTE -->
+    <div class="max-w-4xl w-full bg-white rounded-3xl shadow-2xl border-4 border-caribbean-700/20 overflow-hidden relative paper-bg my-auto">
+        
+        <!-- Adornos de Fondo (Olas y Palmas simulación) -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-caribbean-100 rounded-full blur-3xl -z-0 opacity-60"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-sunshine-400/10 rounded-full blur-3xl -z-0 opacity-50"></div>
+
+        <!-- Encabezado / Logo -->
+        <header class="relative z-10 px-6 pt-6 pb-2 text-center">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                
+                <!-- Logo Pampatar Paradise (Imagen) -->
+                <div class="sm:w-1/3 flex flex-col items-center">
+                    <a href="#" class="inline-block transition-transform hover:scale-105 duration-300">
+                        <!-- Recuerda asegurarte de que tu imagen esté en la ruta img/logo.jpg o img/logo.png -->
+                        <img src="img/logo.jpg" 
+                             alt="Pampatar Paradise - El Sabor de la Isla" 
+                             class="h-28 sm:h-36 w-auto object-contain drop-shadow-md">
+                    </a>
+                </div>
+                
+                <!-- Ubicación a la derecha -->
+                <div class="text-right sm:w-1/3 hidden sm:block">
+                    <span class="text-caribbean-700 text-xs font-semibold">
+                        <i class="fa-solid fa-location-dot text-coral-500 mr-1"></i> Isla de Margarita, VZLA
+                    </span>
+                </div>
+
+            </div>
+        </header>
+
+        <main class="relative z-10 px-6 py-4">
+            
+            <!-- GRID PRINCIPAL DE LA CARTA -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="md:col-span-5 space-y-6">
+
+                    <!-- Imagen del Platillo -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white ring-1 ring-black/10 group">
+                        <img src="img/fs.jpg" alt="Foforera de Pampatar">
+                        <div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md text-white text-[10px] px-2.5 py-1 rounded-full">
+                            <i class="fa-solid fa-camera mr-1"></i> Foforera Margarita
+                        </div>
+                    </div>
+                                        
+                    <!-- Origen del Plato -->
+                    <section class="bg-caribbean-100/50 p-4 rounded-2xl border border-caribbean-300/40 shadow-sm">
+                        <div class="inline-block px-3 py-1 brush-badge text-caribbean-900 font-bold text-base mb-2">
+                            Origen del plato
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
+                            La Fosforera de Pampatar es un plato tradicional de la Isla de Margarita, Venezuela. Su origen se remonta a la cultura pesquera de la región, donde los mariscos frescos eran parte esencial de la alimentación de sus habitantes. Con el tiempo, esta deliciosa mezcla de sabores del mar se convirtió en un ícono gastronómico de Pampatar, representando la tradición, la frescura y la esencia caribeña de la isla.
+                        </p>
+                        <div class="text-right text-caribbean-700 mt-1">
+                            <i class="fa-solid fa-water text-lg"></i>
+                        </div>
+                    </section>
+
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="md:col-span-7 space-y-6">
+
+                    <!-- Ingredientes -->
+                    <section>
+                        <div class="inline-block px-3 py-1 brush-badge text-caribbean-900 font-bold text-base mb-3">
+                            Ingredientes
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <ul class="text-xs sm:text-sm text-gray-700 space-y-1 font-medium pl-2">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Camarones</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Calamares</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Pulpo</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Mejillones</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Ají dulce</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Cebolla</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Ajo</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Tomate</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Pimentón</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Especias (orégano, laurel, pimienta)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Salsa de tomate</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Vino blanco (opcional)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Aceite de oliva o vegetal</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-coral-500 rounded-full"></span> Sal</li>
+                            </ul>
+                            <div class="text-caribbean-300 text-5xl opacity-80 pt-2">
+                                <i class="fa-solid fa-feather-pointed"></i>
+                            </div>
+                        </div>
+                    </section>
+                                       
+                    <!-- Imagen del Platillo -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-lg border-4 border-white ring-1 ring-black/10 group">
+                        <img src="img/fp.jpg" alt="Foforera de Pampatar">
+                        <div class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-md text-white text-[10px] px-2.5 py-1 rounded-full">
+                            <i class="fa-solid fa-camera mr-1"></i> Foforera Margarita
+                        </div>
+                    </div>
+                                      
+                    <!-- Método de Preparación -->
+                    <section>
+                        <div class="inline-block px-3 py-1 brush-badge text-caribbean-900 font-bold text-base mb-4">
+                            Método de preparación en casa
+                        </div>
+
+                        <ol class="space-y-3 text-xs sm:text-sm text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">1</span>
+                                <span>Mantén el producto congelado hasta el momento de prepararlo.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">2</span>
+                                <span>Coloca el paquete sellado al vacío en agua fría (sin abrir) y deja descongelar por 12 a 24 horas en el refrigerador.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">3</span>
+                                <span>Una vez descongelado, abre el paquete y vierte el contenido en una sartén o caldero.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">4</span>
+                                <span>Calienta a fuego medio durante 8 a 10 minutos, removiendo ocasionalmente, hasta que esté bien caliente.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">5</span>
+                                <span>Si deseas, puedes añadir un poco de aceite de oliva o mantequilla para realzar el sabor.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-6 h-6 rounded-full bg-caribbean-900 text-white font-bold flex items-center justify-center text-xs shrink-0 mt-0.5">6</span>
+                                <span>Sirve y disfruta. Puedes acompañarlo con arroz, tostones o una ensalada fresca.</span>
+                            </li>
+                        </ol>
+
+                        <div class="mt-4 p-3 bg-caribbean-50 rounded-lg text-xs text-gray-600 space-y-1">
+                            <p>No es necesario volver a sellar al vacío.</p>
+                            <p>Solo conserva el producto en refrigeración una vez abierto y consúmelo en un máximo de 2 días.</p>
+                        </div>
+                    </section>
+                                      
+                    <!-- Adversidades / Contraindicaciones -->
+                    <section class="bg-coral-400/10 p-4 rounded-2xl border border-coral-500/20">
+                        <div class="inline-block px-3 py-1 brush-badge-coral text-coral-600 font-bold text-base mb-2">
+                            Adversidades
+                        </div>
+                        <p class="text-xs font-bold text-coral-600 flex items-center gap-2 mb-2">
+                            <i class="fa-solid fa-triangle-exclamation text-base"></i> No recomendado para:
+                        </p>
+                        <ul class="text-xs text-gray-700 space-y-1.5 list-disc list-inside">
+                            <li>Personas alérgicas a los mariscos.</li>
+                            <li>Personas con problemas de ácido úrico (gota).</li>
+                            <li>Personas con enfermedades gastrointestinales en fase aguda.</li>
+                            <li>Personas con hipertensión (por su contenido de sodio).</li>
+                        </ul>
+                        <p class="text-[11px] text-gray-500 italic mt-3">
+                            Siempre es importante consumirlo con moderación y, en caso de duda, consultar a un médico.
+                        </p>
+                    </section>
+
+                    <!-- Sección de Precio y Frase -->
+                    <div class="pt-4 border-t border-sand-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-center sm:text-left">
+                            <div class="inline-block px-4 py-1 brush-badge-green text-emerald-800 font-bold text-sm mb-1">
+                                Precio
+                            </div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-4xl font-extrabold text-caribbean-900">$12</span>
+                                <span class="text-xs text-gray-500 font-medium">por porción</span>
+                            </div>
+                        </div>
+
+                        <div class="text-center sm:text-right">
+                            <p class="font-hand text-3xl font-bold text-coral-500 -rotate-2">
+                                ¡El auténtico sabor de nuestra isla!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Botón interactivo para pedir en el restaurante (Ideal para QR) -->
+            <div class="mt-8 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-xs text-gray-500 flex items-center gap-2">
+                    <i class="fa-solid fa-anchor text-caribbean-700"></i>
+                    <span>Pampatar Paradise • QR Digital</span>
+                </div>
+                <button onclick="orderDish()" class="w-full sm:w-auto bg-caribbean-700 hover:bg-caribbean-900 text-white font-bold px-6 py-3 rounded-full shadow-md transition flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-utensils"></i> Solicitar este Producto
+                </button>
+            </div>
+
+        </main>
+
+        <!-- Pie de página con palmeras decorativas -->
+        <footer class="bg-caribbean-900 text-white/80 text-[11px] py-3 px-6 text-center flex justify-between items-center">
+            <span>Isla de Margarita, Venezuela</span>
+            <div class="flex gap-3 text-sm text-sunshine-400">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <i class="fa-solid fa-fish"></i>
+                <i class="fa-solid fa-sun"></i>
+            </div>
+            <span>Pampatar Paradise 2026</span>
+        </footer>
+
+    </div>
+
+    <script>
+        function orderDish() {
+            const table = prompt("Por favor, indícanos si su pedido es mayorista o minorista:");
+            if(table) {
+                alert(`¡Gracias! Nos pondremos en contacto enseguida.`);
+            }
+        }
+    </script>
+</body>
+</html>
